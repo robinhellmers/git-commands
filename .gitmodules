@@ -4,3 +4,6 @@
 [submodule "git-merge-log"]
 	path = git-merge-log
 	url = git@github.com:robinhellmers/git-merge-log.git
+[submodule "gitconfigs"]
+	path = gitconfigs
+	url = git@github.com:robinhellmers/gitconfigs.git
