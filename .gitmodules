@@ -1,3 +1,6 @@
 [submodule "git-status-recursive"]
 	path = git-status-recursive
 	url = git@github.com:robinhellmers/git-status-recursive.git
+[submodule "git-merge-log"]
+	path = git-merge-log
+	url = git@github.com:robinhellmers/git-merge-log.git
