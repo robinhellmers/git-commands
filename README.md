@@ -1,3 +1,6 @@
 # Repository structure
 
-This repository should only contain submodules. Each submodule should be 1 git command.
+This repository should only contain
+* Submodules with each submodule being a single git command
+* Gitconfig files named `gitconfig.<suffix>`
+* This `README.md`

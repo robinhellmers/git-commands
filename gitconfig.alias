@@ -1,0 +1,26 @@
+[alias]
+    # Base command for log formatting
+    lg-base = "log --graph --decorate=short --decorate-refs-exclude='refs/tags/*' --color=always"
+    # Version 1 log format
+    lg1 = "lg-base --format=format:'%C(#f0890c)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(#d10000)%d%C(reset)'"
+    # Version 2 log format
+    lg2 = "lg-base --format=format:'%C(#f0890c)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(#d10000)%d%C(reset)%n            %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+    # Short
+    lg = lg1
+    lga = "lg1 --all"
+    st = status
+    co = checkout
+    cp = cherry-pick
+    rb = rebase
+    msg = show -s --format=%B
+    amend = commit --amend --no-edit
+    stash-unstaged = !"cd \"${GIT_PREFIX:-.}\"; f() { \
+        git commit --quiet -m \"TEMP\";               \
+        git stash -u \"$@\";                          \
+        git reset --quiet --soft HEAD^;               \
+    }; f"
+    stash-staged = !"cd \"${GIT_PREFIX:-.}\"; f() { \
+        git stash-unstaged --quiet;                 \
+        git stash -u \"$@\";                        \
+        git stash pop --quiet \"stash@{1}\";        \
+    }; f"
