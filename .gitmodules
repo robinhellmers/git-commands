@@ -1,0 +1,3 @@
+[submodule "git-status-recursive"]
+	path = git-status-recursive
+	url = git@github.com:robinhellmers/git-status-recursive.git
